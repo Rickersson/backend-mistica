@@ -1,0 +1,14 @@
+CREATE TABLE professores(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    cpf VARCHAR(14),
+    formacao VARCHAR(255),
+    logradouro VARCHAR(255),
+    numero VARCHAR(255),
+    bairro VARCHAR(255),
+    cidade VARCHAR(255),
+    uf VARCHAR(2),
+    cep VARCHAR(10),
+    complemento VARCHAR(50)
+);
