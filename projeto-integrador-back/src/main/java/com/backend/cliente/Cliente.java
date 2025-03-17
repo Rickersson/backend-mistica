@@ -9,8 +9,7 @@ import java.util.Date;
 import com.backend.endereco.Endereco;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+
 import jakarta.persistence.Table;
 
 @Table(name = "clientes")
@@ -29,7 +28,7 @@ public class Cliente {
 	private String email;
 	private String cpf;
 	private Endereco endereco;
-	
+	private Boolean ativo;
 	public Cliente() {}
 	public Cliente(DadosCadastroCliente dados) {
 		this.setName(dados.name());
@@ -93,5 +92,11 @@ public class Cliente {
 		}
 		
 		
+	}
+	public Boolean getAtivo() {
+		return ativo;
+	}
+	public void setAtivo(Boolean ativo) {
+		this.ativo = ativo;
 	}
 }
